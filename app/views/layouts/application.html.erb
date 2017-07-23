@@ -12,7 +12,17 @@
 </head>
 <body>
 
-<%= yield %>
+<%= render 'layouts/header' %>
+
+<% if current_page?(root_url) %>
+  <div class="container-fluid">
+<% else %>
+  <div class="container">
+<% end %>
+  <%= yield %>
+</div>
+
+<%= render 'layouts/footer' %>
 
 </body>
 </html>

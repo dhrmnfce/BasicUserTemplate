@@ -5,6 +5,8 @@ source 'https://rubygems.org'
 gem 'rails', '5.0.3'
 # Use SCSS for stylesheets
 gem 'sass-rails', '5.0.6'
+# Use Bootstrap for stylization
+gem 'bootstrap-sass', '3.3.7'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '3.2.0'
 # Use CoffeeScript for .coffee assets and views

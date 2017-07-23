@@ -1,0 +1,199 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+/*---- UNIVERSAL, COLOR PALETTE, MISC. VARIABLES, & RESETS ----*/
+
+$green: #2bd170;
+$offwhite: #fff7e0;
+$boldgreen: #14ad54;
+$darkgreen: #437f5c;
+
+.row {
+  margin: 0;
+}
+
+.container, .container-fluid {
+  padding: 0;
+}
+
+body {
+  padding-top: 50px;
+  background: $offwhite;
+}
+
+section {
+  overflow: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.center {
+  text-align: center;
+}
+
+/* TYPOGRAPHY */
+
+#logo {
+  color: $offwhite;
+  text-decoration: none;
+  font-size: 2em;
+  line-height: 50px;
+  font-weight: 300;
+  letter-spacing: -1px;
+  transition-property: opacity;
+  transition: 1s;
+  &:hover {
+    opacity: .8;
+  }
+}
+
+.logoDiv {
+  margin-right: auto;
+  margin-left: auto;
+  width: 141px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1;
+}
+
+h1 {
+  font-size: 3em;
+  letter-spacing: -2px;
+  margin-bottom: 30px;
+}
+
+h2 {
+  font-size: 1.2em;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+  font-weight: normal;
+  color: #777;
+}
+
+p {
+  font-size: 1.1em;
+  line-height: 1.7em;
+}
+
+.navbar-inverse {
+  background-color: $boldgreen;
+  border-color: $darkgreen;
+  .navbar-nav {
+    li {
+      a {
+        color: $offwhite;
+        opacity: .75;
+        transition-property: opacity;
+        transition: .5s;
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+/*
+.navbar-inverse .navbar-nav > li > a {
+  color: $offwhite;
+  opacity: .75;
+  transition-property: opacity;
+  transition: .5s;
+  &:hover {
+    opacity: 1;
+  }
+}
+*/
+/* TYPOGRAPHY END */
+
+/*---- END ----*/
+
+
+
+
+
+/*---- NAVIGATION (Logged Out) ---- */
+
+/*---- NAVIGATION (Logged Out) END ---- */
+
+
+
+/*---- NAVIGATION (Logged In) ---- */
+
+/*---- NAVIGATION (Logged In) END ---- */
+
+
+
+/*---- STATIC PAGES  ---- */
+
+
+/* CAROUSEL */
+
+.carousel-fade {
+  background: #000;
+  .carousel-inner {
+    .item {
+      transition-property: opacity;
+    }
+    
+    .item,
+    .active.left,
+    .active.right {
+      opacity: 0;
+    }
+  
+    .active,
+    .next.left,
+    .prev.right {
+      opacity: 1;
+    }
+  
+    .next,
+    .prev,
+    .active.left,
+    .active.right {
+      left: 0;
+      transform: translate3d(0, 0, 0);
+    }
+  }
+}
+
+.carousel-inner {
+  height: 1000px;
+}
+
+.carousel-inner > .item {
+  height: 1000px;
+  //margin-top: 100px;
+  &:nth-of-type(1){
+    background: $green;
+  }
+  &:nth-of-type(2){
+    background: $boldgreen;
+  }
+  &:nth-of-type(3){
+    background: $offwhite;
+  }
+}
+
+/* CAROUSEL END */
+
+
+/*---- STATIC PAGES END ---- */
+
+
+
+/*---- FOOTER ---- */
+
+footer {
+  background: $darkgreen;
+  height: 500px;
+  p {
+    color: $offwhite;
+    text-align: center;
+  }
+}
+
+/*---- FOOTER END ---- */

@@ -1,0 +1,21 @@
+<header class="navbar navbar-fixed-top navbar-inverse">
+  <div class="container">
+    <!-- Put brand back here if it doesnt work-->
+    <nav>
+      
+      <ul class="nav navbar-nav navbar-left">
+        <li><%= link_to "About", about_path %></li>
+        <li><%= link_to "Help", help_path %></li>
+      </ul>
+      
+      <ul class="nav navbar-nav navbar-right">
+        <li><%= link_to "Sign Up", signup_path %></li>
+        <li><%= link_to "Log in", '#' %></li>
+      </ul>
+      
+      <div class="logoDiv">
+        <%= link_to "TenantNest", root_url, id: "logo" %>
+      </div>
+    </nav>
+  </div>
+</header>
