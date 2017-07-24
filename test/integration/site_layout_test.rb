@@ -16,11 +16,9 @@ class SiteLayoutTest < ActionDispatch::IntegrationTest
     get root_url
     assert_template 'static_pages/home'
     assert_select "div.container-fluid"
-    assert_response :success
     get help_path
     assert_template 'static_pages/help'
     assert_select "div.container"
-    assert_response :success
   end
   
 end
