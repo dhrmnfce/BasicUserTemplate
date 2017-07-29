@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
-
+# Declare ruby version
+ruby '2.3.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '5.0.3'
 # Use SCSS for stylesheets
