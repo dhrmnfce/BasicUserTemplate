@@ -4,7 +4,7 @@
 /*---- UNIVERSAL, COLOR PALETTE, MISC. VARIABLES, & RESETS ----*/
 
 $green: #2bd170;
-$offwhite: #fff7e0;
+//$offwhite: #fff7e0;
 $boldgreen: #14ad54;
 $darkgreen: #437f5c;
 
@@ -16,9 +16,13 @@ $darkgreen: #437f5c;
   padding: 0;
 }
 
+#containerID {
+  padding-bottom: 50px;
+}
+
 body {
   padding-top: 50px;
-  background: $offwhite;
+  background: white;
 }
 
 section {
@@ -36,7 +40,7 @@ textarea {
 /* TYPOGRAPHY */
 
 #logo {
-  color: $offwhite;
+  color: white;
   text-decoration: none;
   font-size: 2em;
   line-height: 50px;
@@ -84,7 +88,7 @@ p {
   .navbar-nav {
     li {
       a {
-        color: $offwhite;
+        color: white;
         opacity: .75;
         transition-property: opacity;
         transition: .5s;
@@ -115,10 +119,16 @@ p {
 
 .debug_dump {
   clear: both;
-  float: left;
-  width: 100%;
+  //float: left;
+  max-width: 1000px;
   margin-top: 45px;
+  margin-left: auto;
+  margin-right: auto;
   @include box_sizing;
+}
+
+.alert {
+  margin: 20px 0 20px 0;
 }
 
 /* DEBUG END */
@@ -138,6 +148,23 @@ p {
 /*---- NAVIGATION (Logged In) ---- */
 
 /*---- NAVIGATION (Logged In) END ---- */
+
+
+
+
+/*---- FOOTER ---- */
+
+footer {
+  background: $darkgreen;
+  height: 500px;
+  p {
+    color: white;
+    text-align: center;
+  }
+}
+
+/*---- FOOTER END ---- */
+
 
 
 
@@ -189,7 +216,7 @@ p {
     background: $boldgreen;
   }
   &:nth-of-type(3){
-    background: $offwhite;
+    background: white;
   }
 }
 
@@ -200,15 +227,66 @@ p {
 
 
 
-/*---- FOOTER ---- */
 
-footer {
-  background: $darkgreen;
-  height: 500px;
-  p {
-    color: $offwhite;
-    text-align: center;
+/*---- FORMS ----*/
+
+input, textarea, select, .uneditable-input {
+  border: 1px solid #bbb;
+  width: 100%;
+  margin-bottom: 15px;
+  @include box_sizing;
+}
+
+input {
+  height: auto !important;
+}
+
+#error_explanation {
+  color: red;
+  ul {
+    color: red;
+    margin: 0 0 30px 0;
   }
 }
 
-/*---- FOOTER END ---- */
+.field_with_errors {
+  @extend .has-error;
+  .form-control {
+    color: $state-danger-text;
+  }
+}
+
+/*---- FORMS END ----*/
+
+
+
+
+/*---- PROFILES ----*/
+
+aside {
+  section.user_info {
+    margin-top: 20px;
+  }
+  section {
+    padding: 10px 0;
+    margin-top: 20px;
+    &:first-child {
+      border: 0;
+      padding-top: 0;
+    }
+    span {
+      display: block;
+      margin-bottom: 3px;
+      line-height: 1;
+    }
+    h1 {
+      font-size: 1.4em;
+      text-align: left;
+      letter-spacing: -1px;
+      margin-bottom: 3px;
+      margin-top: 0px;
+    }
+  }
+}
+
+/*---- PROFILES END ----*/

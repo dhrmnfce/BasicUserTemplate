@@ -1,0 +1,7 @@
+<% flash.each do |message_type, message| %>
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2">
+      <%= content_tag(:div, message, class: "center alert alert-#{message_type}") %>
+    </div>
+  </div>
+<% end %>
