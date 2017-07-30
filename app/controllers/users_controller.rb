@@ -11,6 +11,7 @@ class UsersController < ApplicationController
   def create
     @user = User.create(user_params)
     if @user.save
+      log_in @user
       flash[:success] = "Successfully signed up, welcome to TenantNest!"
       redirect_to @user
     else

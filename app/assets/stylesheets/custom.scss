@@ -147,6 +147,27 @@ p {
 
 /*---- NAVIGATION (Logged In) ---- */
 
+#accountMenu {
+  background: $boldgreen;
+  li {
+    a:hover {
+      background: $darkgreen;
+    }
+  }
+  .divider {
+    background-color: $darkgreen;
+  }
+}
+
+#accountDropdown {
+  a:hover {
+    background: $darkgreen;
+  }
+  a:focus {
+    background: $darkgreen;
+  }
+}
+
 /*---- NAVIGATION (Logged In) END ---- */
 
 

@@ -8,10 +8,24 @@
         <li><%= link_to "Help", help_path %></li>
       </ul>
       
-      <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "Sign Up", signup_path %></li>
-        <li><%= link_to "Log in", '#' %></li>
-      </ul>
+      <% if logged_in? %>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown" id="accountDropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Account <b class="caret"></b></a>
+            <ul class="dropdown-menu" id="accountMenu">
+              <li><%= link_to "Profile", current_user %></li>
+              <li><%= link_to "Settings", '#' %></li>
+              <li class="divider"></li>
+              <li><%= link_to "Log Out", logout_path, method: :delete %></li>
+            </ul>
+          </li>
+        </ul>
+      <% else %>
+        <ul class="nav navbar-nav navbar-right">
+          <li><%= link_to "Sign Up", signup_path %></li>
+          <li><%= link_to "Log In", login_path %></li>
+        </ul>
+      <% end %>
       
       <div class="logoDiv">
         <a href="<%= root_url %>" id="logo">TenantNest<sup>beta</sup></a>
