@@ -8,6 +8,14 @@ $green: #2bd170;
 $boldgreen: #14ad54;
 $darkgreen: #437f5c;
 
+@function tint($color, $percentage) {
+  @return mix(white, $color, $percentage);
+}
+
+@function shade($color, $percentage) {
+  @return mix(black, $color, $percentage);
+}
+
 .row {
   margin: 0;
 }
@@ -292,6 +300,31 @@ input {
 }
 
 /*---- FORMS END ----*/
+
+
+
+
+/*---- USER INDEX ----*/
+
+.users {
+  list-style: none;
+  margin: 0;
+  li {
+    overflow: auto;
+    padding: 10px 0;
+    border-bottom: 1px solid tint($green, 60%);
+    a {
+      color: $darkgreen;
+      text-decoration: none;
+      transition: 1s;
+      &:hover {
+        color: $boldgreen;
+      }
+    }
+  }
+}
+
+/*---- USER INDEX END ----*/
 
 
 

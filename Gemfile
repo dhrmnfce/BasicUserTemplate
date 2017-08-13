@@ -30,6 +30,12 @@ gem 'bcrypt', '3.1.11'
 # Use Puma as the app server
 gem 'puma', '3.9.1'
 
+# Use will_paginate to display users/properties
+gem 'will_paginate', '3.1.5'
+
+# Use bootstrap stying for will_paginate
+gem 'bootstrap-will_paginate', '1.0.0'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
@@ -50,6 +56,9 @@ group :development do
   gem 'spring', '2.0.2'
   
   gem 'spring-watcher-listen', '2.0.1'
+  
+  # Use faker to seed dev database with users
+  gem 'faker', '1.7.3'
 end
 
 group :test do
