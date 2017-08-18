@@ -5,25 +5,42 @@ user_one:
   email: one@example.com
   password_digest: <%= User.digest('password') %>
   admin: true
+  activated: true
+  activated_at: <%= Time.zone.now %>
 
 user_two:
   name: Example Two
   email: two@exmaple.com
   password_digest: <%= User.digest('password') %>
+  activated: true
+  activated_at: <%= Time.zone.now %>
 
 user_three:
   name: Example Three
   email: three@example.com
   password_digest: <%= User.digest('password') %>
+  activated: true
+  activated_at: <%= Time.zone.now %>
 
 user_four:
   name: Example Four
   email: four@exmaple.com
   password_digest: <%= User.digest('password') %>
+  activated: true
+  activated_at: <%= Time.zone.now %>
+
+unactivated:
+  name: Un Activated
+  email: un@activ.ate
+  password_digest: <%= User.digest('password') %>
+  activated: false
+  activated_at: nil
 
 <% 30.times do |n| %>
 user_<%= n %>:
   name:  <%= "User #{n}" %>
   email: <%= "user-#{n}@example.com" %>
   password_digest: <%= User.digest('password') %>
+  activated: true
+  activated_at: <%= Time.zone.now %>
 <% end %>

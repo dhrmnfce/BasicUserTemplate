@@ -1,0 +1,68 @@
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <meta charset="UTF-8">
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <style>
+  
+    .greetingBlock {
+      background: #14ad54;
+      padding: 5px 30px;
+    }
+    
+    h1.greeting {
+        color: white;
+        font-size: 3.5em;
+    }
+    
+    p {
+      font-size: 1.25em;
+    }
+    
+    .activationLink {
+      text-decoration: none;
+      color: #14ad54;
+    }
+    
+    .activationLink:link {
+      text-decoration: none;
+      color: #14ad54;
+    }
+    
+    .activationLink:hover {
+      text-decoration: none;
+      color: #2bd170;
+    }
+    
+    .activationLink:active {
+      text-decoration: none;
+      color: #437f5c;
+    }
+    
+    .activationLink:visited {
+      text-decoration: none;
+      color: #14ad54;
+    }
+    
+    .activationString {
+      font-size: .5em;
+    }
+    
+  </style>
+</head>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2">
+      <div class="greetingBlock">
+        <h1 class="greeting"><%= @greeting %></h1>
+      </div>
+      </br>
+      <p>
+         Click <%= link_to "here", edit_account_activation_url(@user. activation_token, email: @user.email), class: 'activationLink' %> to activate your account, or copy this url and paste it in your browser:
+         </br>
+         <span class="activationString"><%= edit_account_activation_url(@user.activation_token, email: @user.email) %></span>
+      </p>
+    </div>
+  </div>
+</div>
