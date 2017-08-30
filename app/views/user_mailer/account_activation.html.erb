@@ -59,7 +59,7 @@
       </div>
       </br>
       <p>
-         Click <%= link_to "here", edit_account_activation_url(@user. activation_token, email: @user.email), class: 'activationLink' %> to activate your account, or copy this url and paste it in your browser:
+         Click <%= link_to "here", edit_account_activation_url(@user.activation_token, email: @user.email), class: 'activationLink' %> to activate your account, or copy this url and paste it in your browser:
          </br>
          <span class="activationString"><%= edit_account_activation_url(@user.activation_token, email: @user.email) %></span>
       </p>
